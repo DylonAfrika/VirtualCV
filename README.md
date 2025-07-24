@@ -1,0 +1,3 @@
+Hear me out ne...
+90% income tax and 75% property tax
+I promise I'm not a communist.
