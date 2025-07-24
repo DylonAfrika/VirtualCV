@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateFlowerImage(theme) {
         const flowers = document.querySelectorAll('.portfolio-flower');
         flowers.forEach(flower => {
-            flower.src = theme === 'dark-mode' ? '/images/dark mode flower.svg' : '/images/light mode flower.svg';
+            flower.src = theme === 'dark-mode' ? '/VirtualCV/images/dark mode flower.svg' : '/VirtualCV/images/light mode flower.svg';
         });
     }
     
