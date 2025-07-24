@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dylon Afrika CV</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    </head>
+    <body>
+        <div id="theme-toggle-container">
+            <button id="theme-toggle" aria-label="Toggle light/dark mode">
+                <span id="toggle-track">
+                    <span id="toggle-thumb"></span>
+                </span>
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+        </div>
+        
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#aboutMe">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <section class="welcome">
+                <div id="welcome">
+                    <h1>Dylon Afrika</h1>
+                    <p>UI/UX Designer|BSc IT student</p>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section id="container">
+                <section id="aboutMe" class="container">
+                    <div id="intro-card">
+                        <div class="pfp-container">
+                            <img src="/VirtualCV/images/pfp.png" id="pfp" alt="Dylon's Profile Picture">
+                        </div>
+                        <div class="about-text">
+                            <h2>About Me</h2>
+                            <p>Hi, I'm Dylon, a final year BSc in IT student from the North-West University. I am an aspiring UI/UX designer and frontend developer. I have fullstack capabilities, but am currently fixated on frontend technologies such as React.</p>
+                        </div>
+                    </div>
+                    <div id="hobbiesAndInterests">
+                        <h2>Hobbies and Interests</h2>
+                        <ul>
+                            <li>2D rendering</li>
+                            <li>Pixelart</li>
+                            <li>Sound design</li>
+                            <li>Graphic design</li>
+                            <li>Video editing</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="projects" class="container">
+                    <div id="projects-content">
+                        <h2>Projects</h2>
+                        <p>Click on the flower to see my growing portfolio</p>
+                        <a href="https://github.com/DylonAfrika" target="_blank">
+                            <img src="/VirtualCV/images/light mode flower.svg" class="portfolio-flower" alt="GitHub Portfolio">
+                        </a>
+                    </div>
+                </section>
+                <section id="skills" class="container">
+                    <div id="skills-container">
+                        <div class="skills-card" id="technical-skills">
+                            <h3>Technical Skills</h3>
+                            <div class="progress-container">
+                                <span for="datastructures">Data Structures</span>
+                                <span class="skill-level"><strong>Intermediate</strong></span>
+                                <progress id="datastructures" value="70" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="frontend">Frontend Development</span>
+                                <span class="skill-level"><strong>Intermediate</strong></span>
+                                <progress id="frontend" value="75" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="backend">Backend Development</span>
+                                <span class="skill-level"><strong>Intermediate</strong></span>
+                                <progress id="backend" value="75" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="uxui">UX/UI Design</span>
+                                <span class="skill-level"><strong>Expert</strong></span>
+                                <progress id="uxui" value="95" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="skills-card" id="soft-skills">
+                            <h3>Soft Skills</h3>
+                            <div class="progress-container">
+                                <span for="communication">Communication</span>
+                                <span class="skill-level"><strong>Expert</strong></span>
+                                <progress id="communication" value="90" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="leadership">Team Leadership</span>
+                                <span class="skill-level"><strong>Proficient</strong></span>
+                                <progress id="leadership" value="85" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="networking">Networking & Relationship Building</span>
+                                <span class="skill-level"><strong>Proficient</strong></span>
+                                <progress id="networking" value="80" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="organization">Organization</span>
+                                <span class="skill-level"><strong>Proficient</strong></span>
+                                <progress id="organization" value="80" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="skills-card" id="languages">
+                            <h3>Languages</h3>
+                            <div class="progress-container">
+                                <span for="htmlcss">HTML/CSS</span>
+                                <span class="skill-level"><strong>Proficient</strong></span>
+                                <progress id="htmlcss" value="85" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="javascript">JavaScript</span>
+                                <span class="skill-level"><strong>Proficient</strong></span>
+                                <progress id="javascript" value="80" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="cpp">C++</span>
+                                <span class="skill-level"><strong>Intermediate</strong></span>
+                                <progress id="cpp" value="70" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="java">Java</span>
+                                <span class="skill-level"><strong>Intermediate</strong></span>
+                                <progress id="java" value="75" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="skills-card" id="tools">
+                            <h3>Tools</h3>
+                            <div class="progress-container">
+                                <span for="penpot">Penpot</span>
+                                <span class="skill-level"><strong>Proficient</strong></span>
+                                <progress id="penpot" value="85" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="github">GitHub</span>
+                                <span class="skill-level"><strong>Expert</strong></span>
+                                <progress id="github" value="90" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="vscode">VS Code</span>
+                                <span class="skill-level"><strong>Expert</strong></span>
+                                <progress id="vscode" value="90" max="100"></progress>
+                            </div>
+                            <div class="progress-container">
+                                <span for="canva">Canva</span>
+                                <span class="skill-level"><strong>Expert</strong></span>
+                                <progress id="canva" value="95" max="100"></progress>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer id="contact" class="container">
+            <div>
+                <ul>
+                    <li>edafrika07@gmail.com</li>
+                    <li>+27 73 874 7358</li>
+                    <li><a href="https://github.com/DylonAfrika">GitHub Profile</a></li>
+                    <li><a href="https://www.linkedin.com/in/dylon-afrika-4a222026b">LinkedIn Profile</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="functionality.js"></script>
+    </body>
+</html>
