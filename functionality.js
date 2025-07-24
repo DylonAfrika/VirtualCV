@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const toggleThumb = document.getElementById('toggle-thumb');
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
+    const portfolioFlower = document.querySelector('.portfolio-flower');
     
     // Check for saved user preference
     const currentTheme = localStorage.getItem('theme') || 'light-mode';
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Apply saved theme
     body.classList.add(currentTheme);
     updateToggle(currentTheme);
+    updateFlowerImage(currentTheme);
     
     // Toggle between themes
     themeToggle.addEventListener('click', function() {
@@ -20,18 +22,41 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.replace('light-mode', 'dark-mode');
             localStorage.setItem('theme', 'dark-mode');
         }
-        updateToggle(body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode');
+        const newTheme = body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+        updateToggle(newTheme);
+        updateFlowerImage(newTheme);
     });
     
     function updateToggle(theme) {
         if (theme === 'dark-mode') {
             toggleThumb.style.transform = 'translateX(24px)';
             themeIcon.textContent = '☀️';
-            themeIcon.style.marginLeft = '8px'; // Adjust as needed
+            themeIcon.style.marginLeft = '8px';
         } else {
             toggleThumb.style.transform = 'translateX(0)';
             themeIcon.textContent = '🌙';
             themeIcon.style.marginLeft = '0';
         }
     }
+    
+    function updateFlowerImage(theme) {
+        const flowers = document.querySelectorAll('.portfolio-flower');
+        flowers.forEach(flower => {
+            flower.src = theme === 'dark-mode' ? '/images/dark mode flower.svg' : '/images/light mode flower.svg';
+        });
+    }
+    
+    // Add hover effect to all images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        if (!img.classList.contains('portfolio-flower')) {
+            img.style.transition = 'transform 0.3s ease';
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.05)';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+            });
+        }
+    });
 });

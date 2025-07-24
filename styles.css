@@ -1,23 +1,40 @@
 *{
-	font-family: Century Gothic;
+    font-family: Century Gothic;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
     background-color: var(--container-bg);
+    border: 8px solid var(--container-bg);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*themes*/
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
+    --bg-color: #ffefb1;
+    --text-color: #191515;
     --container-bg: #e0a6ff;
+    --progress-bar: #a600ff;
+    --flower-image: url('/images/light mode flower.svg');
+    --inverse-bg-color: #080039;
+    --inverse-text-color: #dfdfdf;
 }
 
 #theme-toggle-container {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 #theme-toggle {
@@ -61,40 +78,167 @@
 }
 
 body.dark-mode {
-    --bg-color: #333333;
-    --text-color: #ffffff;
-    --container-bg: #4a2d5e;
+    --bg-color: #080039;
+    --text-color: #dfdfdf;
+    --container-bg: #540082;
+    --progress-bar: #c75eff;
     --toggle-track-bg: #555;
     --toggle-thumb-bg: #ddd;
+    --flower-image: url('/images/dark mode flower.svg');
+    --inverse-bg-color: #ffefb1;
+    --inverse-text-color: #191515;
 }
 
 body.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #000000;
+    --bg-color: #ffefb1;
+    --text-color: #191515;
     --container-bg: #e0a6ff;
+    --progress-bar: #a600ff;
     --toggle-track-bg: #e0e0e0;
     --toggle-thumb-bg: #ffffff;
+    --flower-image: url('/images/light mode flower.svg');
+    --inverse-bg-color: #080039;
+    --inverse-text-color: #dfdfdf;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 70px;
 }
 
-/*About Me Section*/
-
-/*Hobbies and Interest*/
-#hobbiesAndInterests {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container-bg);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#hobbiesAndInterests h3 {
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+#navbar a:hover {
+    color: var(--inverse-text-color);
+    background-color: var(--inverse-bg-color);
+}
+
+/* Header */
+header {
+    background-color: var(--inverse-bg-color);
+    color: var(--inverse-text-color);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#welcome {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#welcome h1 {
+    font-size: 3.5rem;
     margin-bottom: 10px;
-    color: #333;
+    position: relative;
+    z-index: 2;
+}
+
+#welcome p {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* About Me Section */
+#aboutMe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+}
+
+#intro-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.pfp-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+#pfp {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--container-bg);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+#pfp:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Hobbies and Interests */
+#hobbiesAndInterests {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--container-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+#hobbiesAndInterests h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
 }
 
 #hobbiesAndInterests ul {
@@ -105,7 +249,8 @@ body {
 #hobbiesAndInterests li {
     padding-left: 25px;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
 }
 
 #hobbiesAndInterests li:last-child {
@@ -120,19 +265,51 @@ body {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-image: url('/images/light mode flower.svg');
+    background-image: var(--flower-image);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-/*Projects Section*/
+/* Projects Section */
+#projects-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
 
-/*Skills Section*/
+.portfolio-flower {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-flower:hover {
+    transform: scale(1.2);
+}
+
+/* Skills Section */
 #skills-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-card {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: scale(1.03);
 }
 
 .progress-container {
@@ -152,7 +329,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: #a600ff;
+    background-color: var(--progress-bar);
     border-radius: 0.5rem;
 }
 
@@ -166,6 +343,116 @@ label {
     display: inline-block;
     margin-left: 10px;
     font-size: 0.8em;
-    color: #000000;
+    color: var(--text-color);
     font-style: italic;
+}
+
+/* Contact Section */
+#contact {
+    position: relative;
+}
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+#contact a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+    
+    #welcome h1 {
+        font-size: 2.8rem;
+    }
+    
+    #welcome p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #aboutMe {
+        grid-template-columns: 1fr;
+    }
+    
+    #intro-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    #navbar ul {
+        gap: 10px;
+    }
+    
+    #navbar a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    #welcome h1 {
+        font-size: 2.5rem;
+    }
+    
+    #welcome p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    #navbar a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
+    #welcome h1 {
+        font-size: 2rem;
+    }
+    
+    #welcome p {
+        font-size: 1rem;
+    }
+    
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
 }

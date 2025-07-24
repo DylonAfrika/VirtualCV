@@ -36,10 +36,12 @@
             <section id="container">
                 <section id="aboutMe" class="container">
                     <div id="intro-card">
-                        <img src="/images/pfp.png" id="pfp" alt="Dylon's Profile Picture">
-                        <div>
+                        <div class="pfp-container">
+                            <img src="/images/pfp.png" id="pfp" alt="Dylon's Profile Picture">
+                        </div>
+                        <div class="about-text">
                             <h2>About Me</h2>
-                            <p>Hi, I'm Dylon, a final year BSc in IT student from the North-West University. I am an aspiring UI/UX designer and frontend developer. I have fullstack capabilities, but am currently fixateed on frpntend technologies such as React.</p>
+                            <p>Hi, I'm Dylon, a final year BSc in IT student from the North-West University. I am an aspiring UI/UX designer and frontend developer. I have fullstack capabilities, but am currently fixated on frontend technologies such as React.</p>
                         </div>
                     </div>
                     <div id="hobbiesAndInterests">
@@ -54,17 +56,17 @@
                     </div>
                 </section>
                 <section id="projects" class="container">
-                    <div id="projects">
+                    <div id="projects-content">
                         <h2>Projects</h2>
                         <p>Click on the flower to see my growing portfolio</p>
-                        <a href="https://github.com/DylonAfrika">
-                            <img src="/images/DTF_logo.svg" alt="GitHub Portfolio" style="width: 100px; height: 100px;">
+                        <a href="https://github.com/DylonAfrika" target="_blank">
+                            <img src="/images/light mode flower.svg" class="portfolio-flower" alt="GitHub Portfolio">
                         </a>
                     </div>
                 </section>
                 <section id="skills" class="container">
                     <div id="skills-container">
-                        <div id="technical-skills">
+                        <div class="skills-card" id="technical-skills">
                             <h3>Technical Skills</h3>
                             <div class="progress-container">
                                 <label for="datastructures">Data Structures</label>
@@ -87,7 +89,7 @@
                                 <span class="skill-level">Expert</span>
                             </div>
                         </div>
-                        <div id="soft-skills">
+                        <div class="skills-card" id="soft-skills">
                             <h3>Soft Skills</h3>
                             <div class="progress-container">
                                 <label for="communication">Communication</label>
@@ -110,7 +112,7 @@
                                 <span class="skill-level">Proficient</span>
                             </div>
                         </div>
-                        <div id="languages">
+                        <div class="skills-card" id="languages">
                             <h3>Languages</h3>
                             <div class="progress-container">
                                 <label for="htmlcss">HTML/CSS</label>
@@ -133,7 +135,7 @@
                                 <span class="skill-level">Intermediate</span>
                             </div>
                         </div>
-                        <div id="tools">
+                        <div class="skills-card" id="tools">
                             <h3>Tools</h3>
                             <div class="progress-container">
                                 <label for="penpot">Penpot</label>
@@ -160,7 +162,7 @@
                 </section>
             </section>
         </main>
-        <footer id="contact">
+        <footer id="contact" class="container">
             <div>
                 <ul>
                     <li>edafrika07@gmail.com</li>
