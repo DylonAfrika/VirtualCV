@@ -1,3 +1,16 @@
+window.addEventListener('resize', adjustWelcomeCardScale);
+
+function adjustWelcomeCardScale() {
+    const welcomeCard = document.getElementById('welcome');
+    if (window.innerWidth >= 1024) {
+        welcomeCard.style.transform = 'scale(1.2)';
+    } else if (window.innerWidth >= 768) {
+        welcomeCard.style.transform = 'scale(1.1)';
+    } else {
+        welcomeCard.style.transform = 'scale(1)';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const toggleThumb = document.getElementById('toggle-thumb');
