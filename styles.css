@@ -3,10 +3,127 @@
 }
 
 .container {
-	background-color: #e0a6ff;
+    background-color: var(--container-bg);
+}
+
+/*themes*/
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --container-bg: #e0a6ff;
+}
+
+#theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#toggle-track {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: var(--toggle-track-bg, #e0e0e0);
+    border-radius: 12px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--toggle-thumb-bg, #ffffff);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#theme-icon {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --container-bg: #4a2d5e;
+    --toggle-track-bg: #555;
+    --toggle-thumb-bg: #ddd;
+}
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --container-bg: #e0a6ff;
+    --toggle-track-bg: #e0e0e0;
+    --toggle-thumb-bg: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /*About Me Section*/
+
+/*Hobbies and Interest*/
+#hobbiesAndInterests {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+#hobbiesAndInterests h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#hobbiesAndInterests ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#hobbiesAndInterests li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+#hobbiesAndInterests li:last-child {
+    border-bottom: none;
+}
+
+#hobbiesAndInterests li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/light mode flower.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 /*Projects Section*/
 
@@ -43,4 +160,12 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
+}
+
+.skill-level {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: #000000;
+    font-style: italic;
 }

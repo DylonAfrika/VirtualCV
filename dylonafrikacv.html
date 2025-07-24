@@ -8,6 +8,14 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
     </head>
     <body>
+        <div id="theme-toggle-container">
+            <button id="theme-toggle" aria-label="Toggle light/dark mode">
+                <span id="toggle-track">
+                    <span id="toggle-thumb"></span>
+                </span>
+                <span id="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+        </div>
         <nav id="navbar">
             <ul>
                 <li><a href="#aboutMe">About me</a></li>
@@ -34,9 +42,25 @@
                             <p>Hi, I'm Dylon, a final year BSc in IT student from the North-West University. I am an aspiring UI/UX designer and frontend developer. I have fullstack capabilities, but am currently fixateed on frpntend technologies such as React.</p>
                         </div>
                     </div>
+                    <div id="hobbiesAndInterests">
+                        <h2>Hobbies and Interests</h2>
+                        <ul>
+                            <li>2D rendering</li>
+                            <li>Pixelart</li>
+                            <li>Sound design</li>
+                            <li>Graphic design</li>
+                            <li>Video editing</li>
+                        </ul>
+                    </div>
                 </section>
                 <section id="projects" class="container">
-
+                    <div id="projects">
+                        <h2>Projects</h2>
+                        <p>Click on the flower to see my growing portfolio</p>
+                        <a href="https://github.com/DylonAfrika">
+                            <img src="/images/DTF_logo.svg" alt="GitHub Portfolio" style="width: 100px; height: 100px;">
+                        </a>
+                    </div>
                 </section>
                 <section id="skills" class="container">
                     <div id="skills-container">
@@ -141,10 +165,11 @@
                 <ul>
                     <li>edafrika07@gmail.com</li>
                     <li>+27 73 874 7358</li>
-                    <li>GitHub Profile</li>
-                    <li>LinkedIn Profile</li>
+                    <li><a href="https://github.com/DylonAfrika">GitHub Profile</a></li>
+                    <li><a href="https://www.linkedin.com/in/dylon-afrika-4a222026b">LinkedIn Profile</a></li>
                 </ul>
             </div>
         </footer>
+        <script src="functionality.js"></script>
     </body>
 </html>
