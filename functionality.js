@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateFlowerImage(theme) {
         const flowers = document.querySelectorAll('.portfolio-flower');
         flowers.forEach(flower => {
-            flower.src = theme === 'dark-mode' ? '/DTF_logo_dark.svg' : '/DTF_logo_light.svg';
+            flower.src = theme === 'dark-mode' ? '/images/DTF_logo_dark.svg' : '/images/DTF_logo_light.svg';
         });
     }
     
