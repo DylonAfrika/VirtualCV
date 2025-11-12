@@ -25,7 +25,7 @@
     --text-color: #191515;
     --container-bg: #e0a6ff;
     --progress-bar: #a600ff;
-    --flower-image: url('/light mode flower.svg');
+    --flower-image: url('/DTF_logo_light.svg');
     --inverse-bg-color: #080039;
     --inverse-text-color: #dfdfdf;
 }
@@ -84,7 +84,7 @@ body.dark-mode {
     --progress-bar: #c75eff;
     --toggle-track-bg: #555;
     --toggle-thumb-bg: #ddd;
-    --flower-image: url('/dark mode flower.svg');
+    --flower-image: url('/DTF_logo_dark.svg');
     --inverse-bg-color: #ffefb1;
     --inverse-text-color: #191515;
 }
@@ -96,7 +96,7 @@ body.light-mode {
     --progress-bar: #a600ff;
     --toggle-track-bg: #e0e0e0;
     --toggle-thumb-bg: #ffffff;
-    --flower-image: url('/light mode flower.svg');
+    --flower-image: url('/DTF_logo_light.svg');
     --inverse-bg-color: #080039;
     --inverse-text-color: #dfdfdf;
 }

@@ -43,11 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateToggle(theme) {
         if (theme === 'dark-mode') {
             toggleThumb.style.transform = 'translateX(24px)';
-            themeIcon.textContent = '☀️';
             themeIcon.style.marginLeft = '8px';
         } else {
             toggleThumb.style.transform = 'translateX(0)';
-            themeIcon.textContent = '🌙';
             themeIcon.style.marginLeft = '0';
         }
     }
@@ -55,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateFlowerImage(theme) {
         const flowers = document.querySelectorAll('.portfolio-flower');
         flowers.forEach(flower => {
-            flower.src = theme === 'dark-mode' ? '/dark mode flower.svg' : '/light mode flower.svg';
+            flower.src = theme === 'dark-mode' ? '/DTF_logo_dark.svg' : '/DTF_logo_light.svg';
         });
     }
     
